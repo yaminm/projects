@@ -15,7 +15,7 @@ controller('mCTRL', function($scope,$http){
 						]
 	$http.get('data/countries.json').then( //then  - promise
 		function(responseSuccess){
-			$scope.dataFromHttp = response;
+			$scope.dataFromHttp = responseSuccess;
 		},function(responseErr){
 			console.log('error:' + responseErr);
 		}
