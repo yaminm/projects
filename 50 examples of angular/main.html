@@ -1,0 +1,49 @@
+<!doctype html>
+<html >
+  <head>
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+
+  </head>
+  <body >
+    <div ng-app="myApp" ng-controller="mCTRL">
+    	{{firstName}}
+      <input ng-model="firstName" type="text">
+      <ol> ng-repear on array:
+      	<li ng-repeat="value in arrA track by $index">
+      		{{value}} <a href="" ng-click="remove(value)">Remove!</a>
+      	</li>
+      </ol>
+      <input ng-model="elem"/>
+      <button ng-click="addTo(elem)">add by ng-click</button>
+
+      <form ng-submit="addTo(elem)">
+      	<input ng-model="elem"/>
+      	<input type='submit' value="add by ng-submit in form" />
+      </form>
+
+      <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Population</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="country in countries">
+            <td> {{country.name}}</li>
+            <td>{{country.population}}</td>
+        </tr>
+      </tbody>
+
+    </div>
+
+
+
+<script>
+  document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+  ':35729/livereload.js?snipver=1"></' + 'script>')
+</script>
+<!-- livereload "C:\Users\ymenash\Documents\project\50 examples of angular" -->
+  </body>
+</html>
